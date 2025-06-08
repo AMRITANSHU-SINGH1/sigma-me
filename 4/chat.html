@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Chat App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Login Screen -->
+        <div id="login-screen" class="screen">
+            <div class="login-form">
+                <h2>Join Chat</h2>
+                <input type="text" id="username-input" placeholder="Enter your username" maxlength="20">
+                <input type="text" id="room-input" placeholder="Room name (optional)" value="general">
+                <button id="join-btn">Join Chat</button>
+            </div>
+        </div>
+
+        <!-- Chat Screen -->
+        <div id="chat-screen" class="screen hidden">
+            <div class="chat-header">
+                <h3 id="room-title">Room: general</h3>
+                <div class="user-info">
+                    <span id="username-display"></span>
+                    <button id="leave-btn">Leave</button>
+                </div>
+            </div>
+
+            <div class="chat-container">
+                <div class="sidebar">
+                    <h4>Online Users</h4>
+                    <ul id="user-list"></ul>
+                </div>
+
+                <div class="chat-main">
+                    <div id="messages" class="messages"></div>
+                    <div id="typing-indicator" class="typing-indicator"></div>
+                    
+                    <div class="message-input">
+                        <input type="text" id="message-input" placeholder="Type your message..." maxlength="500">
+                        <button id="send-btn">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
