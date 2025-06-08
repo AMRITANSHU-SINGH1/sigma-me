@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>froms lets learn it</title>
+</head>
+
+<body>
+     <h1>Form to apply for SWE III at konvexion </h1>
+     <form action="post">
+          <div>
+               <label for="username">Enter your Name:</label>
+               <input type="text" name="username" id="username" placeholder="enter your name">
+               <!-- id is the unique identifier for the any element-->
+          </div>
+
+          <div>
+               <input type="radio" id="male" name="gender" value="male">
+               <!-- here name=gender is used which help to select only one out of 
+               two buttons at a time-->
+               <label for="male">Male</label>
+               <input type="radio" id="female" name="gender" value="female">
+               <label for="female">Female</label>
+               <!-- jo input tag hai uski id hogi label tag ke for me-->
+          </div>
+
+          <div>
+               <input type="checkbox" name="newsletter" id="newsletter" value="yes">
+               <label for="newsletter">subscribe to our new newslettter feature</label>
+          </div>
+
+          <div> 
+               <label for="comment">Enter your comments:</label>
+               <br>
+               <textarea name="comment" id="comment" rows="4" cols="50"></textarea>
+              
+          </div>
+
+          <div>
+               <label for="ROLES">Enter your role you want to apply for </label>
+               <select name="ROLES" id="ROLES">
+                    <option value="ML SWE III">ML SWE III</option>
+                    <option value="DATA ANALYST SWE III">DATA ANALYST SWE III</option>
+                    <option value="SYSTEM SWE III">SYSTEM SWE III</option>
+               </select>
+          </div>
+     </form>
+
+
+</body>
+
+</html>
